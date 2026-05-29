@@ -1,0 +1,20 @@
+# Maritime-adjacent and infrastructure CVEs relevant to AIS, GPS, wireless access, radio, and supporting platforms
+
+Supplementary table for vulnerabilities that are not necessarily maritime-native but become relevant through AIS/GPS software, maritime-associated vendors, radio infrastructure, or deployment context.
+
+## Table
+
+| CVE | CVSS | Affected component | Maritime role | Weakness | Access | Potential impact |
+| --- | --- | --- | --- | --- | --- | --- |
+| CVE-2025-66216 | 9.8 | AIS-catcher < 0.64 | AIS receiver / AIS monitoring software | Heap buffer overflow in AIS message handling | Crafted AIS-processing input | Denial of service, memory corruption, and possible RCE. |
+| CVE-2025-66217 | 7.5 | AIS-catcher < 0.64 | AIS receiver with MQTT integration | Integer underflow leading to heap overflow | Malformed MQTT packet | Denial of service and possible RCE when used as a library. |
+| CVE-2013-2038 | 4.3 v2 | gpsd before 3.9 | GPS/NMEA navigation-data parser | Malformed NMEA0183 sentence handling | Crafted GPS/NMEA packet | Daemon crash and possible arbitrary code execution. |
+| CVE-2025-28236 | 9.8 | Nautel VX Series transmitters | Radio/transmitter infrastructure | RCE in firmware update process | Crafted update package | Arbitrary code execution during software upgrade. |
+| CVE-2023-41086 | 8.8 | FURUNO SYSTEMS wireless LAN access points | Wireless infrastructure from maritime-associated vendor | Cross-site request forgery | Logged-in user visits malicious page | Unintended configuration or administrative operations. |
+| CVE-2023-39429 | 5.4 | FURUNO SYSTEMS wireless LAN access points | Wireless infrastructure from maritime-associated vendor | Cross-site scripting | Authenticated crafted configuration | Script injection through device configuration. |
+| CVE-2023-39222 | 8.8 | FURUNO SYSTEMS wireless LAN access points | Wireless infrastructure from maritime-associated vendor | OS command injection | Authenticated web request | Execution of arbitrary OS commands. |
+| CVE-2022-26343 | -- | Intel processor BIOS firmware | Generic computing platform; weak maritime fit | Improper access control | Privileged local access | Local escalation of privilege on affected platforms. |
+
+## Data
+
+[Download CSV](./maritime-adjacent-infrastructure-cves.csv)

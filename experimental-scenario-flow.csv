@@ -1,0 +1,5 @@
+Stage,Example,Weakness Type,Role
+Installation,Unsigned firmware update,Product vulnerability (CVE),Persistence
+Triggering,AIS/ECDIS trust assumptions,Architectural weakness,Activation
+Execution,Dormant payload,Attack path,Malicious behavior
+Outcome,"Route manipulation, false alerts",Cyber-physical consequence,Operational impact
