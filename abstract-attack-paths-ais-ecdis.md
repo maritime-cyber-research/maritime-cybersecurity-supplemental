@@ -1,3 +1,7 @@
+---
+title: "Abstract attack paths combining CVE-enabled stages with AIS/ECDIS triggering"
+---
+
 # Abstract attack paths combining CVE-enabled stages with AIS/ECDIS triggering
 
 Supplementary abstraction of attack paths that combine product vulnerabilities with AIS/ECDIS-based cyber-physical triggering mechanisms.

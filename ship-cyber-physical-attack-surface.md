@@ -1,3 +1,7 @@
+---
+title: "Ship cyber-physical attack surface considered in this paper"
+---
+
 # Ship cyber-physical attack surface considered in this paper
 
 Supplementary version of the attack-surface table used to describe the ship as a cyber-physical environment rather than as a set of isolated devices.

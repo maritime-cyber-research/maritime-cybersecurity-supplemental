@@ -1,3 +1,7 @@
+---
+title: "Threat-model-driven security requirements for naval and maritime systems"
+---
+
 # Threat-model-driven security requirements for naval and maritime systems
 
 Supplementary requirements table derived from the threat model. This table may remain outside the short article if the article focuses on evidence and scenario construction rather than requirements engineering.

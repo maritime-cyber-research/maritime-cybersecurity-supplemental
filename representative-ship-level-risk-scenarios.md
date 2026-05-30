@@ -1,3 +1,7 @@
+---
+title: "Representative ship-level risk scenarios derived from CVE families"
+---
+
 # Representative ship-level risk scenarios derived from CVE families
 
 Supplementary scenario table summarizing how CVE families can be interpreted as ship-level attack paths rather than isolated product flaws.

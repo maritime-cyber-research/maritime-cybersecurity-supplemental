@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
   
-  <!-- Official GitHub Markdown CSS theme -->
-  <link rel="stylesheet" href="https://cloudflare.com">
+  <!-- GitHub Markdown CSS, matching the normal repository Markdown view closely. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css">
   
   <style>
     /* Support system dark/light mode preference */
@@ -52,19 +52,7 @@
       text-decoration: underline;
     }
 
-    /* 
-      PREVENTS BLINKING SAFELY:
-      Targets Jekyll's specific pre/code structure to hide the text text block instantly.
-    */
-    pre code.language-mermaid {
-      display: none !important;
-    }
-    pre:has(code.language-mermaid) {
-      background: transparent !important;
-      border: none !important;
-    }
-
-    /* Mermaid charts alignment and smooth fade-in */
+    /* Mermaid charts alignment and smooth fade-in. */
     .mermaid {
       background: transparent !important;
       display: flex;
@@ -95,38 +83,48 @@
     {{ content }}
   </article>
 
-  <!-- Global Mermaid script that transforms Jekyll markdown code blocks -->
+  <!-- Render fenced ```mermaid blocks on GitHub Pages. -->
   <script type="module">
-    import mermaid from 'https://jsdelivr.net';
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     
-    // Detect system dark mode preference to match Mermaid theme dynamically
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     mermaid.initialize({ 
       startOnLoad: false,
-      theme: isDarkMode ? 'dark' : 'default'
+      theme: isDarkMode ? 'dark' : 'default',
+      securityLevel: 'strict'
     });
 
-    // Run processing as soon as DOM tree is interactive
     const renderMermaid = async () => {
-      const blocks = document.querySelectorAll('.language-mermaid');
+      const blocks = document.querySelectorAll('pre > code.language-mermaid');
       
-      blocks.forEach((block) => {
+      blocks.forEach((block, index) => {
         const pre = block.parentElement;
-        if (pre && pre.tagName === 'PRE') {
-          const div = document.createElement('div');
-          div.className = 'mermaid';
-          div.textContent = block.textContent;
-          pre.replaceWith(div);
-        }
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.id = `mermaid-${index}`;
+        div.textContent = block.textContent;
+        pre.replaceWith(div);
       });
 
-      // Render the custom divs safely
-      await mermaid.run();
+      if (blocks.length) {
+        await mermaid.run({ querySelector: '.mermaid' });
+      }
+    };
+
+    const rewriteMarkdownLinks = () => {
+      document.querySelectorAll('a[href$=".md"]').forEach((link) => {
+        const href = link.getAttribute('href');
+        link.setAttribute('href', href.replace(/\.md$/, '.html'));
+      });
     };
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', renderMermaid);
+      document.addEventListener('DOMContentLoaded', () => {
+        rewriteMarkdownLinks();
+        renderMermaid();
+      });
     } else {
+      rewriteMarkdownLinks();
       renderMermaid();
     }
   </script>

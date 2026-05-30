@@ -1,3 +1,7 @@
+---
+title: "Supplementary Material"
+---
+
 # Supplementary Material
 
 This repository contains CSV and Markdown versions of tables prepared to support the article. CSV files provide the tabular data; Markdown files include the table caption, a brief note, and a download link.

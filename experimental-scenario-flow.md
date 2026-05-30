@@ -1,3 +1,7 @@
+---
+title: "Experimental Scenario Flow: Product Vulnerability Meets AIS/ECDIS Triggering"
+---
+
 # Experimental Scenario Flow: Product Vulnerability Meets AIS/ECDIS Triggering
 
 This experimental note mirrors the compact scenario-flow table in the article and adds a Mermaid diagram for GitHub rendering. It is meant as a visual supplement, not as a separate claim of exploitability.

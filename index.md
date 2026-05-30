@@ -1,3 +1,7 @@
+---
+title: "Supplementary Material"
+---
+
 # Supplementary Material
 
 This folder contains CSV and Markdown versions of tables moved out of the short article draft. CSV files provide the tabular data; Markdown files include the table caption, a brief note, and a download link.

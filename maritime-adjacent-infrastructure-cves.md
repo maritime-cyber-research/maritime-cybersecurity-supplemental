@@ -1,3 +1,7 @@
+---
+title: "Maritime-adjacent and infrastructure CVEs relevant to AIS, GPS, wireless access, radio, and supporting platforms"
+---
+
 # Maritime-adjacent and infrastructure CVEs relevant to AIS, GPS, wireless access, radio, and supporting platforms
 
 Supplementary table for vulnerabilities that are not necessarily maritime-native but become relevant through AIS/GPS software, maritime-associated vendors, radio infrastructure, or deployment context.

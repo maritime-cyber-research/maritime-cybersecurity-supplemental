@@ -1,3 +1,7 @@
+---
+title: "Examples of CVEs relevant to naval and maritime cyber-physical systems"
+---
+
 # Examples of CVEs relevant to naval and maritime cyber-physical systems
 
 Supplementary CVE inventory used as representative evidence for product-level weaknesses that can become maritime-relevant in cyber-physical attack paths.

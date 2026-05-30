@@ -1,3 +1,7 @@
+---
+title: "Visual Explorations"
+---
+
 # Visual Explorations
 
 This page collects experimental visual summaries derived from the supplementary CVE tables and research notes. The figures are exploratory: they are meant to suggest possible article figures, not to replace the curated tables.

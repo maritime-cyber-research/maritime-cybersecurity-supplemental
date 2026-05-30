@@ -1,3 +1,7 @@
+---
+title: "Maritime-native CVEs affecting navigation, SATCOM, and shipboard communication equipment"
+---
+
 # Maritime-native CVEs affecting navigation, SATCOM, and shipboard communication equipment
 
 Supplementary table for vulnerabilities in equipment with a direct maritime or shipboard communication role, including NavBox, FELCOM, Cobham, and satellite terminal families.
