@@ -30,14 +30,31 @@
       }
     }
     
-    /* GitHub repository link styling */
-    .github-link-container {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 20px;
+    .site-header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--color-border-default, #d0d7de);
-      padding-bottom: 10px;
     }
+
+    .site-header h1 {
+      margin-bottom: 12px;
+    }
+
+    .header-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+    }
+
+    .header-links.has-back-link {
+      justify-content: space-between;
+    }
+
+    .back-link {
+      font-size: 14px;
+    }
+
     .github-link {
       display: inline-flex;
       align-items: center;
@@ -50,22 +67,6 @@
     }
     .github-link:hover {
       text-decoration: underline;
-    }
-
-    .site-header {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--color-border-default, #d0d7de);
-    }
-
-    .site-header h1 {
-      margin-bottom: 8px;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 14px;
     }
 
     /* Mermaid charts alignment and smooth fade-in. */
@@ -87,20 +88,18 @@
   <!-- "markdown-body" class applies official GitHub styling to all elements -->
   <article class="markdown-body">
     
-    <!-- Top navigation bar with repository link -->
-    <div class="github-link-container">
-      <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}" class="github-link" target="_blank" rel="noopener noreferrer">
-        <!-- SVG GitHub Octocat Icon -->
-        <svg height="20" viewBox="0 0 16 16" width="20" style="fill: currentColor;"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82A7.494 7.494 0 0 0 8 3c-.73 0-1.44.1-2.11.29-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
-        View on GitHub
-      </a>
-    </div>
-
     <header class="site-header">
       <h1>{{ site.paper_title }}</h1>
-      {% unless page.path == "README.md" %}
-        <a class="back-link" href="./index.html" onclick="if (document.referrer) { history.back(); return false; }">Back to previous page</a>
-      {% endunless %}
+      <div class="header-links{% unless page.path == "README.md" %} has-back-link{% endunless %}">
+        {% unless page.path == "README.md" %}
+          <a class="back-link" href="./index.html" onclick="if (document.referrer) { history.back(); return false; }">Back to previous page</a>
+        {% endunless %}
+        <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}" class="github-link" target="_blank" rel="noopener noreferrer">
+          <!-- SVG GitHub Octocat Icon -->
+          <svg height="20" viewBox="0 0 16 16" width="20" style="fill: currentColor;"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82A7.494 7.494 0 0 0 8 3c-.73 0-1.44.1-2.11.29-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+          View on GitHub
+        </a>
+      </div>
     </header>
 
     {{ content }}
