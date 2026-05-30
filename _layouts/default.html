@@ -90,8 +90,8 @@
     
     <header class="site-header">
       <h1>{{ site.paper_title }}</h1>
-      <div class="header-links{% unless page.path == "README.md" %} has-back-link{% endunless %}">
-        {% unless page.path == "README.md" %}
+      <div class="header-links{% unless page.path == "README.md" or page.path == "index.md" %} has-back-link{% endunless %}">
+        {% unless page.path == "README.md" or page.path == "index.md" %}
           <a class="back-link" href="./index.html" onclick="if (document.referrer) { history.back(); return false; }">Back to previous page</a>
         {% endunless %}
         <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}" class="github-link" target="_blank" rel="noopener noreferrer">
