@@ -20,3 +20,33 @@ This site accompanies the paper with supporting datasets, curated evidence table
 | [Visual Explorations](./visual-explorations.md) |  | Visual summaries of the evidence-to-scenario logic, CVE relevance taxonomy, article framing choices, and generated CVE count charts. |
 
 Blank Data File cells indicate pages that are narrative notes or visual summaries rather than standalone CSV tables.
+
+## Paper and Venue
+
+**Paper:** Vulnerabilities in Naval Systems: CVE Analysis and Practical Attack Triggering via AIS/ECDIS
+
+**Venue:** MetroSea
+
+**Publication status:** [not yet available]
+
+**DOI:** [not yet available]
+
+**Paper link:** [not yet available]
+
+## Authors
+
+Miguel Angelo Santos Bicudo, Giovanna Magalhães Lavouras, Bernardo Iwamoto Melo, Alan Oliveira de Sá, Raphael Machado, Paulo Mann, Amit Bhaya, and Daniel S. Menasché.
+
+## Contact
+
+Miguel Angelo Santos Bicudo: [masbicudo@gmail.com](mailto:masbicudo@gmail.com)
+
+## Citation
+
+[not yet available]
+
+## Data and Reuse
+
+**License:** [not yet available]
+
+**Last updated:** May 30, 2026
