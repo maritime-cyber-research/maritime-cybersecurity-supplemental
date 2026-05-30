@@ -10,7 +10,7 @@ This repository contains the supplemental CSV and Markdown material for:
 
 View the formatted GitHub Pages site:
 
-[https://masbicudo.github.io/maritime-cybersecurity-supplemental/](https://masbicudo.github.io/maritime-cybersecurity-supplemental/)
+[https://maritime-cyber-research.github.io/maritime-cybersecurity-supplemental/](https://maritime-cyber-research.github.io/maritime-cybersecurity-supplemental/)
 
 If you prefer to browse the source directly in GitHub, start with:
 
